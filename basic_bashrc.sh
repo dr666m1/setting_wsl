@@ -1,11 +1,4 @@
 #===== my aliases & functions =====
-alias myls='exa -la'
-alias ls='exa'
-alias cat='bat'
-alias mycd='cd $WKDIR'
-function myclip_echo () {
-    echo ${1/\/mnt\/c/c:} | clip.exe
-}
 function myclip_cat () {
     if [[ $(uname -a) =~ Microsoft ]]; then
         local fn='clip.exe'
@@ -34,14 +27,3 @@ function myclip_cat () {
     fi
 }
 
-#===== brew =====
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-
-#===== windows path =====
-export PATH="/mnt/c/WINDOWS/system32:$PATH"
-
-#===== exa =====
-export PATH="$HOME/.exa:$PATH"
-
-#===== starship =====
-eval "$(starship init bash)"

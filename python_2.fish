@@ -1,8 +1,8 @@
-#!/bin/bash
-cd $(dirname $0)
+#!/usr/bin/env fish
+cd (dirname (status filename))
 
 #===== pyenv =====
-ver='3.7.0'
+set -l ver "3.7.0"
 pyenv install $ver
 pyenv global $ver
 
