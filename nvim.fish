@@ -11,10 +11,9 @@ git clone https://github.com/dr666m1/setup_nvim.git ~/.nvim/nvim
 git clone https://github.com/dr666m1/setup_snippet.git ~/.nvim/snip
 set fish_user_paths $fish_user_paths $HOME/.nvim/squashfs-root/usr/bin
 ln -s $HOME/.nvim/nvim $HOME/.config/nvim
+git config --global core.editor nvim
 
 #===== dein =====
 curl https://raw.githubusercontent.com/shougo/dein.vim/master/bin/installer.sh > ~/.tmp/dein_installer.sh
 sh ~/.tmp/dein_installer.sh ~/.nvim/dein
 pip install pynvim # deoplete
-
-cat ./nvim_bashrc.sh >> ~/.bashrc

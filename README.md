@@ -1,26 +1,30 @@
 # 概要
 WSLをセットアップするためのシェルスクリプト。
+Debianを想定
 
-純粋なLinuxやmacのターミナルのセットアップに利用するには若干の変更が必要です。
-
-# basic.sh
+# fish.sh
 ## 前提
 特になし。一番最初に実行される想定。
 
 ## 設定事項
-- 環境変数
-- エイリアス
-- 関数
+fishのインストール
+
+# basic.fish
+## 前提
+- fish.shを実行済み
+
+## 設定事項
+- パス
+- 自作関数
+- 基本的なコマンド
 - ssh関連
-- (brew)
 
 ## 備考
-brewのインストールはコメントアウトしている（`pyenv install x.x.x`に影響することがあるため）。
-gitのエディタをnvimに設定しているため、nvim.shの実行前はエラーになる想定。
+brewのインストールは断念した（`pyenv install x.x.x`に影響することがあるため）。
 
-# python_x.sh
+# python_x.fish
 ## 前提
-特になし
+- fish.shを実行済み
 
 ## 設定事項
 - pyenv
@@ -30,10 +34,11 @@ gitのエディタをnvimに設定しているため、nvim.shの実行前はエ
 ## 備考
 `python_1.sh`を実行したら、シェルを再起動して`python_2.sh`を実行する。
 
-# nvim.sh
+# nvim.fish
 ## 前提
-- basic.shを実行済み
-- pyenv.shを実行済み
+- fish.shを実行済み
+- basic.fishを実行済み
+- pyenv.fishを実行済み
 
 ## 設定事項
 - nvim
@@ -63,7 +68,6 @@ gitのエディタをnvimに設定しているため、nvim.shの実行前はエ
 ```
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/xxxxxx.json"
 ```
-
 
 # r.sh
 ## 前提

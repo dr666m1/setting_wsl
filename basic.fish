@@ -12,7 +12,6 @@ ln -s $dldir $WKDIR/downloads
 ln -s $dtdir $WKDIR/desktop
 echo -e "[interop]\nappendWindowsPath = false" | sudo tee -a /etc/wsl.conf
 set -U fish_user_paths /mnt/c/WINDOWS/system32 $fish_user_paths
-set -U fish_user_paths $HOME/.exa $fish_user_paths
 
 #===== directory =====
 mkdir -p ~/.tmp
@@ -36,6 +35,7 @@ curl -L https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_amd6
 sudo dpkg -i ~/.tmp/bat_0.12.1_amd64.deb
 
 #===== exa =====
+set -U fish_user_paths $HOME/.exa $fish_user_paths
 sudo apt install zip unzip
 mkdir -p ~/.exa
 curl -L https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip > ~/.exa/exa-linux-x86_64-0.9.0.zip
