@@ -7,8 +7,8 @@ curl -L -o ~/.nvim/nvim_appimage https://github.com/neovim/neovim/releases/downl
 chmod u+x ~/.nvim/nvim_appimage
 ~/.nvim/nvim_appimage --appimage-extract
 mv squashfs-root/ ~/.nvim/
-git clone https://github.com/dr666m1/setup_nvim.git ~/.nvim/nvim
-git clone https://github.com/dr666m1/setup_snippet.git ~/.nvim/snip
+git clone https://github.com/dr666m1/setting_nvim.git ~/.nvim/nvim
+git clone https://github.com/dr666m1/setting_snippet.git ~/.nvim/snip
 set fish_user_paths $fish_user_paths $HOME/.nvim/squashfs-root/usr/bin
 ln -s $HOME/.nvim/nvim $HOME/.config/nvim
 git config --global core.editor nvim

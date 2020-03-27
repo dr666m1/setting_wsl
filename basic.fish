@@ -26,13 +26,9 @@ echo 'ServerAliveCountMax 3' | sudo tee -a /etc/ssh/ssh_config
 
 #===== git =====
 git config --global user.email $GITHUB_MAIL
-git config --global user.name $LOGNAME
+git config --global user.name $USER
 git config --global core.editor vim
 git config --global color.ui auto
-
-#===== bat =====
-curl -L https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_amd64.deb > ~/.tmp/bat_0.12.1_amd64.deb
-sudo dpkg -i ~/.tmp/bat_0.12.1_amd64.deb
 
 #===== exa =====
 set -U fish_user_paths $HOME/.exa $fish_user_paths
@@ -45,4 +41,4 @@ set -Ux EXA_COLORS "da=1;35"
 
 #===== functions =====
 mkdir -p $HOME/.config/fish/functions
-cp ./functions/* $HOME/.config/fish/functions/
+cp ./basic_functions/* $HOME/.config/fish/functions/

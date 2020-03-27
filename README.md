@@ -1,6 +1,6 @@
 # 概要
-WSLをセットアップするためのシェルスクリプト。
-Debianを想定
+WSL2をセットアップするためのシェルスクリプト。
+Ubuntu-18.04を想定
 
 # fish.sh
 ## 前提
@@ -34,6 +34,8 @@ brewのインストールは断念した（`pyenv install x.x.x`に影響する�
 ## 備考
 `python_1.sh`を実行したら、シェルを再起動して`python_2.sh`を実行する。
 
+自作libraryの中にはMeCabが必要なものもあるため、必要に応じて`mecab.fish`も実行する。
+
 # nvim.fish
 ## 前提
 - fish.shを実行済み
@@ -49,7 +51,7 @@ brewのインストールは断念した（`pyenv install x.x.x`に影響する�
 
 # docker.sh
 ## 前提
-- docker for windowsをインストール済み
+- fish.shを実行済み
 
 ## 設定事項
 - docker
@@ -69,15 +71,21 @@ brewのインストールは断念した（`pyenv install x.x.x`に影響する�
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/xxxxxx.json"
 ```
 
-# r.sh
+# mecab.fish
 ## 前提
-- docker.shを実行済み
+- fish.shを実行済み
 
 ## 設定事項
-- dr666m1/rjupyterのdockerイメージを取得
-- データコンテナの作成
-- aliasの設定
+- MeCabのインストール
+- NEologdのインストール
 
-# mecab.sh
+# bat.fish
 ## 前提
-特になし
+- dockerのインストール
+
+## 設定事項
+- batのDockerイメージをプル
+- エイリアスの設定
+
+## 備考
+- dockerでインストールするのは、なぜかfishと相性が悪いため。Debianなら公式の方法でインストールして問題ない。
