@@ -42,3 +42,7 @@ set -Ux EXA_COLORS "da=1;35"
 #===== functions =====
 mkdir -p $HOME/.config/fish/functions
 cp ./basic_functions/* $HOME/.config/fish/functions/
+
+#===== other =====
+read -p 'echo -e "input your user name of windows\n: "' winuser
+echo 'localhostForwarding=True' > /mnt/c/Users/$winuser/.wslconfig
