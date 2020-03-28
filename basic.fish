@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 cd (dirname (status filename))
 sudo apt update
-sudo -y apt install curl git vim bat
+sudo apt -y install curl git vim bat
 
 #===== path & link & directory =====
 read -p 'echo -e "input main working directory\ne.g. /mnt/c/Users/username/Documents\n: "' wkdir
