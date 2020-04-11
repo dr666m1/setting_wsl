@@ -58,7 +58,9 @@ brewのインストールは断念した（`pyenv install x.x.x`に影響する�
 - docker-compose
 
 ### 備考
-動作確認したければ、[ここ](https://docs.docker.com/compose/gettingstarted/)に短めのスクリプトがある。
+docker-composeの動作確認をしたければ、[ここ](https://docs.docker.com/compose/gettingstarted/)に短めのスクリプトがある。
+
+ログイン時に`sudo service docker start`するので、[ここ](https://qiita.com/RyodoTanaka/items/e9b15d579d17651650b7)を見て、sudoersの設定を済ませる。
 
 ## gcp.fish
 ### 前提

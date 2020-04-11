@@ -14,4 +14,13 @@ sudo systemctl enable docker
 curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-(uname -s)-(uname -m) > ~/.docker/docker-compose
 chmod +x ~/.docker/docker-compose
 set fish_user_paths $fish_user_paths $HOME/.docker
-# simple docker-compose.yml is 
+# simple docker-compose.yml is
+
+echo "
+if sudo service docker status
+    echo Docker is running
+else
+    sudo service docker start
+end
+" >> $HOME/.config/fish/config.fish
+
