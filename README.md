@@ -93,3 +93,9 @@ set -Ux GOOGLE_APPLICATION_CREDENTIALS $HOME/.gcp/xxxxxx.json
 
 ### 備考
 dockerでインストールするのは、Ubuntuだとbatとfishの相性が悪いため。Debianなら公式の方法でインストールして問題ない。
+
+## r.fish
+### 前提
+- dockerのインストール
+### 設定事項
+- dr666m1/myrを利用するfunctionsの設定
