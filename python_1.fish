@@ -11,3 +11,4 @@ set -U fish_user_paths $HOME/.pyenv/bin $fish_user_paths
 set -Ux  PYTHONPATH $WKDIR/library/python $PYTHONPATH
 
 echo 'pyenv init - | source' >> $HOME/.config/fish/config.fish
+cp ./python_functions/* $HOME/.config/fish/functions/

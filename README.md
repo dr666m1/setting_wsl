@@ -30,6 +30,7 @@ brewのインストールは断念した（`pyenv install x.x.x`に影響する�
 ### 設定事項
 - pyenv
 - pipenv
+- poetry
 - library
 
 ### 備考
@@ -64,7 +65,7 @@ docker-composeの動作確認をしたければ、[ここ](https://docs.docker.c
 
 ## gcp.fish
 ### 前提
-- python.fishを実行済み
+- python_x.fishを実行済み
 
 ### 設定事項
 - Cloud SDK
