@@ -100,3 +100,23 @@ dockerでインストールするのは、Ubuntuだとbatとfishの相性が悪�
 - dockerのインストール
 ### 設定事項
 - dr666m1/myrを利用するfunctionsの設定
+
+## node.fish
+### 前提
+特になし
+
+### 設定事項
+- nを使ったnodejsのインストール
+
+## clasp.fish
+### 前提
+- nodejsのインストール
+
+### 設定事項
+- claspのインストール
+
+### 備考
+- 利用前に[APIを有効化](https://script.google.com/home/usersettings)する必要がある。
+- 一度`clasp login`を実行すると`~/.clasprc.json`に認証情報が保存される。
+
+
