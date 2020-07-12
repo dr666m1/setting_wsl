@@ -45,4 +45,7 @@ cp ./basic_functions/* $HOME/.config/fish/functions/
 
 #===== other =====
 read -p 'echo -e "input your user name of windows\n: "' winuser
-echo 'localhostForwarding=True' > /mnt/c/Users/$winuser/.wslconfig
+echo '[wsl2]
+localhostForwarding=True
+memory=4GB
+swap=0' > /mnt/c/Users/$winuser/.wslconfig
